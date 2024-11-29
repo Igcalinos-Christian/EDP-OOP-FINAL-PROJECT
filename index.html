@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="header">
+        <div id="navbar">
+            <div id="pages">
+                <a href="index.html">Home</a>
+                <a href="aboutUs.html">About us</a>
+            </div>
+
+            <div id="searchBar">
+                <input type="text" id="query" placeholder="search here...">
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+
+    <div id="body">
+        <div id="userHud">
+            <div id="map">
+
+            </div>
+            <div id="infoDisplay">
+                <h1>Map of student useable PCs and Printers in NBSC</h1>
+                <div id="cardContainer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="description">
+        <section>
+            <h2>What is our product?</h2>
+            <p>Our product is a webapp that provides a map of a school's PCs and Printners that are available for the students to use.
+                Other than that, it also comes with elementary features like the ability to reserve a pc within a specific room, occupy said room, free a pc, or reset/clear.
+                However, these are assumptive features which clients can integrate into their systems, modify, or remove them entirely.
+            </p>
+        </section>
+        
+        <section>
+            <h2>How do you use our product?</h2>
+            <p>1. Press any of the pins of the map.<br>
+                2. Make a decision between "Use" and "Occupy," then press the corresponding button.<br>
+                3. After use, you either press "Free" to free-up the PC you've used or "Clear" after occupying it.
+            </p>
+        </section>
+
+        <section>
+            <h2>What makes this important?</h2>
+            <p>In situations where one of the school's problems stems from underutilzied services and resources such as PCs and Printers, having a map of them can be helpful.
+                Not only will students be informed of where such resouces and services are, with some additions, like in our example, students
+                will become informed of whether they are free or otherwise, and would have the chance to use them if the former is true. Moreover, it would help students without
+                personal desktops or even laptops in activities/projects that requires the aforementioned whilst reducing hindrances that may arise.
+            </p>
+        </section>
+    </div>
+    
+    <footer>
+        <p style="color: white;">&copy; 2024 Student Innovators | All rights reserved.</p>
+    </footer>
+
+</body>
+<script src="map.js"></script>
+</html>
