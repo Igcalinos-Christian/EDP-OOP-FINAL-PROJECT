@@ -1,7 +1,7 @@
 class map {
     #fileName;
     constructor(fileName) {
-        this.#fileName = fileName;
+        this.#fileName =fileName;
         this.init(this.#fileName);
     }
 
@@ -176,14 +176,20 @@ class MarkerHandler {
 
         reserveBtn.addEventListener("click", () => {
             if(this.isOccupied == true){
-                this.occupyBtn();
+                alert ("ROOM IS OCCUPIED");
+                //this.occupyBtn();
             }else{
                 this.reserveBtn();
             }
         });
     
         occupyBtn.addEventListener("click", () => {
-            this.occupyBtn();
+            if(this.numPc == 0){
+                this.isReserved = false;
+                this.occupyBtn();
+            }else if(this.isReserved == true){
+                alert("Sending a message to reservers...");
+            }
         });
     
         clearBtn.addEventListener("click", () => {
@@ -215,8 +221,7 @@ class MarkerHandler {
                 this.numPc += 1;
                 this.isReserved = true;
                 this.polygon.setStyle({ color: "orange" });
-            }
-            if (this.numPc == this.pin.pin_num_pc) {
+            }else if (this.numPc == this.pin.pin_num_pc) {
                 this.isReserved = false;
                 this.isOccupied = true;
                 this.polygon.setStyle({ color: "red" });
@@ -251,7 +256,6 @@ class MarkerHandler {
             this.polygon.setStyle({ color: "rgb(153, 255, 146)" });
         }
     }
-
 }
 
   const m = new map("map.json");
